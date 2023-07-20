@@ -89,12 +89,12 @@ public static void updatedata() {
     try {
     	
         String url = "jdbc:postgresql://localhost/postgres";
-        String userName = "postgres";
-        String pass = "Harish@532";
+        String userName = "database username";
+        String pass = "database password";
 
         Connection con = DriverManager.getConnection(url, userName, pass);
         Statement st = con.createStatement();
-        String query = "update public.students set age = 15 where name='Surendra Reddy'";
+        String query = "update public.students set age = 15 where name='Github'";
         ResultSet rs = st.executeQuery(query);
 
         st.close();
@@ -113,8 +113,8 @@ public static void insertdata() {
 		  try {
 		    	
 		        String url = "jdbc:postgresql://localhost/postgres";
-		        String userName = "postgres";
-		        String pass = "Harish@532";
+		        String userName = "database username";
+		        String pass = "database password";
 
 		        Connection con = DriverManager.getConnection(url, userName, pass);
 		        PreparedStatement pst = con.prepareStatement("insert into public.students (name, age,admissionno, standard) values (?,?,?,?)");
@@ -156,8 +156,8 @@ public static void deletedata() {
 	  try {
 	    	
 	        String url = "jdbc:postgresql://localhost/postgres";
-	        String userName = "postgres";
-	        String pass = "Harish@532";
+	        String userName = "database username";
+	        String pass = "database password";
 
 	        Connection con = DriverManager.getConnection(url, userName, pass);
 	        PreparedStatement pst = con.prepareStatement("delete from public.students where admissionno = ?");
