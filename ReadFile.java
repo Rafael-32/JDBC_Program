@@ -44,8 +44,8 @@ public static void readdata() {
         	ArrayList<students> arList = new ArrayList<>();
         	
             String url = "jdbc:postgresql://localhost/postgres";
-            String userName = "postgres";
-            String pass = "Harish@532";
+            String userName = "database username";
+            String pass = "database password";
 
             Connection con = DriverManager.getConnection(url, userName, pass);
             Statement st = con.createStatement();
